@@ -3,8 +3,11 @@ import LessonPage from "../../components/LessonPage";
 import Chart from "../../components/Chart02";
 import instruction from "./instruction.md";
 
-const convertData = (input) => {
-  return []; // ここを作りましょう！
+const convertData = (input) => {//function(input)
+  input.sort((item1,item2) => item2.count-item1.count);
+  return input.slice(0,20);
+  //function(item1,item2)
+   // ここを作りましょう！
 };
 
 const Lesson = () => {
